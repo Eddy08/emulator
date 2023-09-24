@@ -72,6 +72,12 @@ sdkmanager "system-images;android-28;google_apis_playstore;x86_64"
 avdmanager -s create avd -n Pixel -k "system-images;android-28;default;x86_64"
 ```
 
+Extra: For Pixel 7:
+
+```
+avdmanager create avd -n pixel_7 -k "system-images;android-28;google_apis_playstore;x86_64"
+```
+
 ## Step 6
 
  See all the avds present by going to the Emulator directory i.e ```H:\Android\software\emulator>```
@@ -90,4 +96,25 @@ Go to the emulator directory i.e ```H:\Android\software\emulator>```
 emulator -avd pixel
 ```
 
-![running emulator](./img/pixel-device.png)
+![running pixel emulator](./img/pixel-device.png)
+
+![running pixel 7 emulator](./img/pixel_7.png)
+
+EXTRA: I am trying to get the apk file from the emulator so below steps are for that :
+
+### Step 8
+
+For downloading the package that we intially download from the playstore :
+a. Get all the installed packages through adb:
+Navigate to adb location:```H:\Android\software\platform-tools>```
+
+```
+adb shell pm list packages
+```
+
+b. Get the location of the installed software
+adb pull <b> &lt; apk_path &gt; H:\path\to\destination </b>
+
+```
+adb pull /data/app/com.abc.def-2u4DtaEcf5HIK5egY2ebUw==/base.apk H:\Android\software\platform-tools\apks
+```
