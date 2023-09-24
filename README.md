@@ -18,32 +18,43 @@
 
 ## Step 4
 
- Go to the latest > bin directory and run the following commands
+ Go to the latest folder bin directory ```H:\Android\software\cmdline-tools\latest\bin>``` and run the following commands
 
 ### a
 
- H:\Android\software\cmdline-tools\latest\bin>```sdkmanager emulator```
+ ```
+ sdkmanager emulator
+ ```
 
 ### b
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "system-images;android-28;default;x86_64"```
+```
+sdkmanager "system-images;android-28;default;x86_64"
+```
 
 ### c
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "platform-tools"```
+```
+sdkmanager "platform-tools"
+```
 
 ### d
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "build-tools;28.0.3"```
+```
+sdkmanager "build-tools;28.0.3"
+```
 
 ### e
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "platforms;android-28"```
+```
+sdkmanager "platforms;android-28"
+```
 
 Extras for pixel 7:
 
-H:\Android\software\cmdline-tools\latest\bin>```
-sdkmanager "system-images;android-28;google_apis_playstore;x86_64"```
+```
+sdkmanager "system-images;android-28;google_apis_playstore;x86_64"
+```
 
 ### Some details /references about the above command
 
@@ -53,22 +64,30 @@ sdkmanager "system-images;android-28;google_apis_playstore;x86_64"```
 
 ## Step 5
 
- Create AVD
+ Create AVD by navigating into ```H:\Android\software\cmdline-tools\latest\bin>```
 
- H:\Android\software\cmdline-tools\latest\bin>
-```avdmanager -s create avd -n Pixel -k "system-images;android-28;default;x86_64"```
+ and running below commands:
+
+```
+avdmanager -s create avd -n Pixel -k "system-images;android-28;default;x86_64"
+```
 
 ## Step 6
 
- See all the avds present by going to the Emulator directory
+ See all the avds present by going to the Emulator directory i.e ```H:\Android\software\emulator>```
+and run below command:
 
-H:\Android\software\emulator>```emulator -list-avds
-Pixel```
+```
+emulator -list-avds
+```
 
 ## Step 7
 
  To run the avd type the name like in the above case I have declared pixle to be avd name checkout Step 6 command: avdmanager -s create avd -n <b> &lt; name of the avd &gt;  </b> -k "
+Go to the emulator directory i.e ```H:\Android\software\emulator>```
 
-H:\Android\software\emulator>```emulator -avd pixel```
+```
+emulator -avd pixel
+```
 
 ![running emulator](./img/pixel-device.png)
