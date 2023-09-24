@@ -20,13 +20,30 @@
 
  Go to the latest > bin directory and run the following commands
 
-```
-    H:\Android\software\cmdline-tools\latest\bin>sdkmanager emulator
-    H:\Android\software\cmdline-tools\latest\bin>sdkmanager 'system-images;android-28;default;x86_64'
-    H:\Android\software\cmdline-tools\latest\bin>sdkmanager 'platform-tools'
-    H:\Android\software\cmdline-tools\latest\bin>sdkmanager 'build-tools;28.0.3'
-    H:\Android\software\cmdline-tools\latest\bin>sdkmanager 'platforms;android-28'
-```
+### a
+
+ H:\Android\software\cmdline-tools\latest\bin>```sdkmanager emulator```
+
+### b
+
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'system-images;android-28;default;x86_64'```
+
+### c
+
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'platform-tools'```
+
+### d
+
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'build-tools;28.0.3'```
+
+### e
+
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'platforms;android-28'```
+
+Extras for pixel 7:
+
+H:\Android\software\cmdline-tools\latest\bin>```
+sdkmanager 'system-images;android-28;google_apis_playstore;x86_64'```
 
 ### Some details /references about the above command
 
@@ -38,25 +55,20 @@
 
  Create AVD
 
-```
-    avdmanager -s create avd -n Pixel -k 'system-images;android-28;default;x86_64'
-```
+ H:\Android\software\cmdline-tools\latest\bin>
+```avdmanager -s create avd -n Pixel -k 'system-images;android-28;default;x86_64'```
 
 ## Step 6
 
  See all the avds present by going to the Emulator directory
 
-```
-    H:\Android\software\emulator>emulator -list-avds
-Pixel
-```
+H:\Android\software\emulator>```emulator -list-avds
+Pixel```
 
 ## Step 7
 
  To run the avd type the name like in the above case I have declared pixle to be avd name checkout Step 6 command: avdmanager -s create avd -n <b> &lt; name of the avd &gt;  </b> -k "
 
-```
-    H:\Android\software\emulator>emulator -avd pixel
-```
+H:\Android\software\emulator>```emulator -avd pixel```
 
 ![running emulator](./img/pixel-device.png)
