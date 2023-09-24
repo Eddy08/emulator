@@ -14,6 +14,8 @@
 
 ( Previously getting error when simply running avdmanager and sdkmanager commands for downloading , to know more check out this link :<https://stackoverflow.com/questions/65262340/cmdline-tools-could-not-determine-sdk-root>)
 
+### After running Step 4 Commands final directory should like this : ![directory structure](./Folder%20Directory.png)
+
 ## Step 4
 
  Go to the latest > bin directory and run the following commands
@@ -51,8 +53,10 @@ Pixel
 
 ## Step 7
 
- To run the avd type the name like in the above case I have declared pixle to be avd name checkout Step 6 command: avdmanager -s create avd -n <name of the avd> -k "
+ To run the avd type the name like in the above case I have declared pixle to be avd name checkout Step 6 command: avdmanager -s create avd -n <b> &lt; name of the avd &gt;  </b> -k "
 
 ```
     H:\Android\software\emulator>emulator -avd pixel
 ```
+
+![running emulator](./pixel-device.png)
