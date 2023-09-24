@@ -26,24 +26,24 @@
 
 ### b
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'system-images;android-28;default;x86_64'```
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "system-images;android-28;default;x86_64"```
 
 ### c
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'platform-tools'```
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "platform-tools"```
 
 ### d
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'build-tools;28.0.3'```
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "build-tools;28.0.3"```
 
 ### e
 
-H:\Android\software\cmdline-tools\latest\bin>```sdkmanager 'platforms;android-28'```
+H:\Android\software\cmdline-tools\latest\bin>```sdkmanager "platforms;android-28"```
 
 Extras for pixel 7:
 
 H:\Android\software\cmdline-tools\latest\bin>```
-sdkmanager 'system-images;android-28;google_apis_playstore;x86_64'```
+sdkmanager "system-images;android-28;google_apis_playstore;x86_64"```
 
 ### Some details /references about the above command
 
@@ -56,7 +56,7 @@ sdkmanager 'system-images;android-28;google_apis_playstore;x86_64'```
  Create AVD
 
  H:\Android\software\cmdline-tools\latest\bin>
-```avdmanager -s create avd -n Pixel -k 'system-images;android-28;default;x86_64'```
+```avdmanager -s create avd -n Pixel -k "system-images;android-28;default;x86_64"```
 
 ## Step 6
 
