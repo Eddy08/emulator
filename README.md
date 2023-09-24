@@ -14,7 +14,7 @@
 
 ( Previously getting error when simply running avdmanager and sdkmanager commands for downloading , to know more check out this link :<https://stackoverflow.com/questions/65262340/cmdline-tools-could-not-determine-sdk-root>)
 
-### After running Step 4 Commands final directory should like this : ![directory structure](./Folder%20Directory.png)
+### After running Step 4 Commands final directory should like this : ![directory structure](./img/Folder%20Directory.png)
 
 ## Step 4
 
@@ -59,4 +59,4 @@ Pixel
     H:\Android\software\emulator>emulator -avd pixel
 ```
 
-![running emulator](./pixel-device.png)
+![running emulator](./img/pixel-device.png)
