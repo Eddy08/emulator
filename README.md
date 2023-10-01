@@ -102,7 +102,7 @@ emulator -avd pixel
 
 EXTRA: I am trying to get the apk file from the emulator so below steps are for that :
 
-### Step 8
+## Step 8
 
 For downloading the package that we intially download from the playstore :
 a. Get all the installed packages through adb:
@@ -117,4 +117,70 @@ adb pull <b> &lt; apk_path &gt; H:\path\to\destination </b>
 
 ```
 adb pull /data/app/com.abc.def-2u4DtaEcf5HIK5egY2ebUw==/base.apk H:\Android\software\platform-tools\apks
+```
+
+EXTRA : In the below steps I am trying to edit and create a new apk file from existing .apk file only without any source code
+
+## Step 9
+
+Install apk tool : Steps mentioned in : <https://apktool.org/docs/install>
+
+## Step 10
+
+Use the command in the directory where .apk file is present:
+
+```
+apktool d filename.apk
+```
+
+to decompile the apk file. This will create a folder with the same name as the apk file that contains the source code and resources of the app.
+
+## Step 11
+
+Use the command:
+
+```
+apktool b foldername
+```
+
+to recompile the apk file. This will create a new apk file in the folder named dist inside the folder you decompiled.
+
+## Step 12
+
+Sign the apk file with below certificate.You can use the keytool command that comes with the JDK:
+
+```
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 20000
+```
+
+## Step 13
+
+Sign your APK with your keystore using the jarsigner command that also comes with the JDK:
+
+```
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore /path/to/your/app.apk alias_name
+```
+
+## Step 14
+
+You can run the final apk through the remote debugging wifi in Developer options in Android.
+Turn the Debugging through Wifi Feature on, and run the below command where the adb is installed.
+Navigate to adb location:```H:\Android\software\platform-tools>```
+
+and run the below command:
+
+```
+adb connect <Enter the IP Showing in the option>
+```
+
+You can see the devices listed as :
+
+```
+adb devices
+```
+
+and for installing the apk on that device use:
+
+```
+adb install /path/to/apk.apk
 ```
