@@ -190,3 +190,11 @@ and for installing the apk on that device use:
 ```
 adb install /path/to/apk.apk
 ```
+
+If you are facing any Certificate issues always use below command to uninstall and then install again :
+
+```
+adb uninstall com.abc.def 
+```
+
+here com.abc.def is  Package name.
