@@ -165,13 +165,19 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.
 
 You can run the final apk through the remote debugging wifi in Developer options in Android.
 Turn the Debugging through Wifi Feature on, and run the below command where the adb is installed.
-Navigate to adb location:```H:\Android\software\platform-tools>```
+Click on the Pair Device with Pairing Code.
+( IP and Pair Code will be displayed on the Popup)
+
+Meanwhile in your local computer Navigate to adb location:```H:\Android\software\platform-tools>```
 
 and run the below command:
 
 ```
-adb connect <Enter the IP Showing in the option>
+adb pair <Enter the IP Showing in the option>
 ```
+
+It will ask you for Pair Code that was seen from your mobile
+enter it and you are connected.
 
 You can see the devices listed as :
 
